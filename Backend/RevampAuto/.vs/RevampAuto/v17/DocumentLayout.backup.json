@@ -1,0 +1,566 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\productimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\productimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\updatepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\updatepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\models\\favorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\models\\favorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\revampauto.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\revampauto.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\revampauto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\revampauto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|d:\\naira\\revamp auto\\backend\\revampauto\\revampauto\\migrations\\20250510112612_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F60A559B-D7AF-4D6A-B543-7D10962BCDD6}|RevampAuto\\RevampAuto.csproj|solutionrelative:revampauto\\migrations\\20250510112612_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductImageDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\ProductImageDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\ProductImageDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\ProductImageDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\ProductImageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T08:17:34.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAUwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:18:21.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:16:59.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABIBAAAAAAAAAAAuwCoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:17:19.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\Category.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Category.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:19:52.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\CategoryDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\CategoryDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\CategoryDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:22:15.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAG4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:17:40.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\ProductDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\ProductDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\ProductDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\ProductDto.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAswCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:22:00.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\RegisterDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:21:44.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdatePasswordDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\UpdatePasswordDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\UpdatePasswordDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\UpdatePasswordDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\UpdatePasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:28:14.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserProfileDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\UserProfileDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\UserProfileDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\UserProfileDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\UserProfileDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA9wBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T11:48:05.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\UserLoginDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\UserLoginDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:21:29.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductImage.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\ProductImage.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\ProductImage.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\ProductImage.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\ProductImage.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T08:16:06.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\Product.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Product.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\Product.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:19:35.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\SeedData.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\SeedData.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\SeedData.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\SeedData.cs",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAAAP8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:55:08.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\User.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\User.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\User.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:19:18.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Services\\IAuthService.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Services\\IAuthService.cs",
+              "RelativeToolTip": "RevampAuto\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:23:20.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Services\\AuthService.cs",
+              "RelativeToolTip": "RevampAuto\\Services\\AuthService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAA+wE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:23:41.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\Order.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Order.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:20:07.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "RevampAuto\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAG4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:20:55.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20250510112612_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Migrations\\20250510112612_InitialCreate.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Migrations\\20250510112612_InitialCreate.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Migrations\\20250510112612_InitialCreate.cs",
+              "RelativeToolTip": "RevampAuto\\Migrations\\20250510112612_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T11:26:13.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\appsettings.json",
+              "RelativeDocumentMoniker": "RevampAuto\\appsettings.json",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\appsettings.json",
+              "RelativeToolTip": "RevampAuto\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-10T07:55:41.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Program.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Program.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Program.cs",
+              "RelativeToolTip": "RevampAuto\\Program.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAwwIsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:31:59.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:26:49.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:17:59.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FavoritesController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\FavoritesController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\FavoritesController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\FavoritesController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\FavoritesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:26:30.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\OrderDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\OrderDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\OrderDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\OrderDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:22:30.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrderItemDto.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\OrderItemDto.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\DTOs\\OrderItemDto.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\DTOs\\OrderItemDto.cs",
+              "RelativeToolTip": "RevampAuto\\DTOs\\OrderItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:22:46.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ContactMessage.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\ContactMessage.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\ContactMessage.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\ContactMessage.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\ContactMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:27:29.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Favorite.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Favorite.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Models\\Favorite.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Models\\Favorite.cs",
+              "RelativeToolTip": "RevampAuto\\Models\\Favorite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:29:08.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RevampAuto.http",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\RevampAuto.http",
+              "RelativeDocumentMoniker": "RevampAuto\\RevampAuto.http",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\RevampAuto.http",
+              "RelativeToolTip": "RevampAuto\\RevampAuto.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-10T07:31:56.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RevampAuto.csproj",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\RevampAuto.csproj",
+              "RelativeDocumentMoniker": "RevampAuto\\RevampAuto.csproj",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\RevampAuto.csproj",
+              "RelativeToolTip": "RevampAuto\\RevampAuto.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-10T07:20:36.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "RevampAuto\\Controllers\\ContactController.cs",
+              "ToolTip": "D:\\Naira\\REVAMP AUTO\\Backend\\RevampAuto\\RevampAuto\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "RevampAuto\\Controllers\\ContactController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:18:44.578Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
