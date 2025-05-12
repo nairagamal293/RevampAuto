@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>REVAMP AUTO</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+        <div class="container topbar bg-primary d-none d-lg-block">
+            <div class="d-flex justify-content-between">
+                <div class="top-info ps-2">
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
+                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
+                </div>
+                <div class="top-link pe-2">
+                    <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/REVAMP.PNG" alt="Fruitables Logo" class="img-fluid" style="max-height: 50px;">
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="shop.html" class="nav-item nav-link active">Shop</a>
+                        <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <a href="cart.html" class="dropdown-item">Cart</a>
+                                <a href="chackout.html" class="dropdown-item">Chackout</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex m-3 me-0">
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                        <a href="#" class="position-relative me-4 my-auto">
+                            <i class="fa fa-shopping-bag fa-2x"></i>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                        </a>
+                        <a href="#" class="my-auto">
+                            <i class="fas fa-user fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+
+    <!-- Single Page Header start -->
+    <div class="container-fluid page-header py-5">
+        <h1 class="text-center text-white display-6">Shop</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-white">Shop</li>
+        </ol>
+    </div>
+    <!-- Single Page Header End -->
+
+
+    <!-- Fruits Shop Start-->
+    <div class="container-fluid fruite py-5">
+        <div class="container py-5">
+            <h1 class="mb-4">Our Products</h1>
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="row g-4">
+                        <div class="col-xl-3">
+                            <div class="input-group w-100 mx-auto d-flex">
+                                <input type="search" id="searchInput" class="form-control p-3" placeholder="Search products..." aria-describedby="search-icon-1">
+                                <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-6"></div>
+                        <div class="col-xl-3">
+                            <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
+                                <label for="sortSelect">Sort by:</label>
+                                <select id="sortSelect" class="border-0 form-select-sm bg-light me-3">
+                                    <option value="default">Default</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="name-asc">Name: A-Z</option>
+                                    <option value="name-desc">Name: Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="mb-3">
+                                        <h4>Categories</h4>
+                                        <ul class="list-unstyled fruite-categorie" id="categories-list">
+                                            <li>
+                                                <div class="d-flex justify-content-between fruite-name">
+                                                    <a href="#" class="category-filter" data-category-id="0"><i class="fas fa-car-alt me-2"></i>All Products</a>
+                                                    <span class="product-count">(0)</span>
+                                                </div>
+                                            </li>
+                                            <!-- Categories will be loaded dynamically -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="mb-3">
+                                        <h4 class="mb-2">Price</h4>
+                                        <input type="range" class="form-range w-100" id="priceRange" min="0" max="500" value="500" oninput="priceValue.value=priceRange.value">
+                                        <output id="priceValue" name="priceValue" for="priceRange">500</output>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="position-relative">
+                                        <img src="img/fb4f3597-f495-48a0-8308-16963b22f9ff.jpeg" class="img-fluid w-100 rounded" alt="">
+                                        <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
+                                            <h3 class="text-secondary fw-bold">Special <br> Offers <br> Banner</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row g-4 justify-content-center" id="shop-products-container">
+                                <!-- Products will be loaded here dynamically -->
+                                <div class="col-12 text-center py-5">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <p class="mt-2">Loading products...</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="pagination d-flex justify-content-center mt-5">
+                                    <a href="#" class="rounded" id="prev-page">&laquo;</a>
+                                    <div id="pagination-numbers" class="d-flex">
+                                        <!-- Pagination numbers will be added here -->
+                                    </div>
+                                    <a href="#" class="rounded" id="next-page">&raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fruits Shop End-->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#">
+                            <h1 class="text-primary mb-0">REVAMP AUTO</h1>
+                            <p class="text-secondary mb-0">Quality Car Care Products</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                            <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex justify-content-end pt-3">
+                            <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Why Choose Us</h4>
+                        <p class="mb-4">We provide high-quality car care products to keep your vehicle looking its best. Our products are carefully selected for their performance and value.</p>
+                        <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Shop Info</h4>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Return Policy</a>
+                        <a class="btn-link" href="">FAQs & Help</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Account</h4>
+                        <a class="btn-link" href="">My Account</a>
+                        <a class="btn-link" href="">Shop details</a>
+                        <a class="btn-link" href="">Shopping Cart</a>
+                        <a class="btn-link" href="">Wishlist</a>
+                        <a class="btn-link" href="">Order History</a>
+                        <a class="btn-link" href="">International Orders</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Contact</h4>
+                        <p>Address: 123 Street, New York</p>
+                        <p>Email: Email@Example.com</p>
+                        <p>Phone: +0123 4567 8910</p>
+                        <p>Payment Accepted</p>
+                        <img src="img/payment.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>REVAMP AUTO</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 my-auto text-center text-md-end text-white">
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Global variables
+        let allProducts = [];
+        let categories = [];
+        let currentPage = 1;
+        const productsPerPage = 8;
+        let currentCategoryId = 0; // 0 means all products
+        let currentSort = 'default';
+        let currentPriceFilter = 500;
+        let currentSearchTerm = '';
+        
+        // Initialize the page
+        loadCategories();
+        loadProducts();
+        
+        // Event listeners
+        document.getElementById('priceRange').addEventListener('change', function() {
+            currentPriceFilter = parseInt(this.value);
+            document.getElementById('priceValue').value = currentPriceFilter;
+            filterProducts();
+        });
+        
+        document.getElementById('sortSelect').addEventListener('change', function() {
+            currentSort = this.value;
+            filterProducts();
+        });
+        
+        document.getElementById('searchInput').addEventListener('input', function() {
+            currentSearchTerm = this.value.toLowerCase();
+            filterProducts();
+        });
+        
+        document.getElementById('prev-page').addEventListener('click', function(e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                renderProducts();
+            }
+        });
+        
+        document.getElementById('next-page').addEventListener('click', function(e) {
+            e.preventDefault();
+            const totalPages = Math.ceil(getFilteredProducts().length / productsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderProducts();
+            }
+        });
+        
+        // Load categories from API
+        function loadCategories() {
+            fetch('https://localhost:7058/api/Categories')
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.json();
+                })
+                .then(data => {
+                    categories = data;
+                    renderCategories();
+                })
+                .catch(error => {
+                    console.error('Error fetching categories:', error);
+                });
+        }
+        
+        // Render categories in the sidebar
+        function renderCategories() {
+            const container = document.getElementById('categories-list');
+            
+            // Clear existing categories except "All Products"
+            const allProductsItem = container.querySelector('.category-filter[data-category-id="0"]').parentNode.parentNode;
+            container.innerHTML = '';
+            container.appendChild(allProductsItem);
+            
+            // Add dynamic categories
+            categories.forEach(category => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="d-flex justify-content-between fruite-name">
+                        <a href="#" class="category-filter" data-category-id="${category.id}">
+                            <i class="fas fa-car-alt me-2"></i>${category.name}
+                        </a>
+                        <span class="product-count">(0)</span>
+                    </div>
+                `;
+                container.appendChild(li);
+            });
+            
+            // Add event listeners to category filters
+            document.querySelectorAll('.category-filter').forEach(filter => {
+                filter.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    currentCategoryId = parseInt(this.getAttribute('data-category-id'));
+                    currentPage = 1;
+                    filterProducts();
+                    
+                    // Update active state
+                    document.querySelectorAll('.category-filter').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        }
+        
+        // Load all products from API
+        function loadProducts() {
+            fetch('https://localhost:7058/api/Products')
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.json();
+                })
+                .then(data => {
+                    allProducts = data;
+                    updateProductCounts();
+                    filterProducts();
+                })
+                .catch(error => {
+                    console.error('Error fetching products:', error);
+                    const container = document.getElementById('shop-products-container');
+                    container.innerHTML = `
+                        <div class="col-12 text-center py-5">
+                            <h3>Error loading products</h3>
+                            <p class="text-muted">${error.message}</p>
+                        </div>
+                    `;
+                });
+        }
+        
+        // Update product counts for each category
+        function updateProductCounts() {
+            document.querySelectorAll('.category-filter').forEach(filter => {
+                const categoryId = parseInt(filter.getAttribute('data-category-id'));
+                let count = 0;
+                
+                if (categoryId === 0) {
+                    count = allProducts.length;
+                } else {
+                    count = allProducts.filter(p => p.categoryId === categoryId).length;
+                }
+                
+                filter.parentNode.querySelector('.product-count').textContent = `(${count})`;
+            });
+        }
+        
+        // Filter products based on current filters
+        function filterProducts() {
+            currentPage = 1; // Reset to first page when filters change
+            renderProducts();
+        }
+        
+        // Get filtered products based on current filters
+        function getFilteredProducts() {
+            let filtered = [...allProducts];
+            
+            // Filter by category
+            if (currentCategoryId !== 0) {
+                filtered = filtered.filter(p => p.categoryId === currentCategoryId);
+            }
+            
+            // Filter by price
+            filtered = filtered.filter(p => p.price <= currentPriceFilter);
+            
+            // Filter by search term
+            if (currentSearchTerm) {
+                filtered = filtered.filter(p => 
+                    p.name.toLowerCase().includes(currentSearchTerm) || 
+                    (p.description && p.description.toLowerCase().includes(currentSearchTerm)))
+            }
+            
+            // Sort products
+            switch(currentSort) {
+                case 'price-low':
+                    filtered.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    filtered.sort((a, b) => b.price - a.price);
+                    break;
+                case 'name-asc':
+                    filtered.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'name-desc':
+                    filtered.sort((a, b) => b.name.localeCompare(a.name));
+                    break;
+                default:
+                    // Default sorting (by ID or whatever the API returns)
+                    break;
+            }
+            
+            return filtered;
+        }
+        
+        // Render products based on current filters and pagination
+        function renderProducts() {
+            const container = document.getElementById('shop-products-container');
+            const filteredProducts = getFilteredProducts();
+            const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+            
+            // Calculate pagination
+            const startIndex = (currentPage - 1) * productsPerPage;
+            const paginatedProducts = filteredProducts.slice(startIndex, startIndex + productsPerPage);
+            
+            // Clear container
+            container.innerHTML = '';
+            
+            if (paginatedProducts.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <h3>No products found</h3>
+                        <p class="text-muted">Try adjusting your filters</p>
+                    </div>
+                `;
+            } else {
+                // Render products
+                paginatedProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'col-md-6 col-lg-6 col-xl-4 mb-4';
+                    
+                    // Get the category name
+                    const category = categories.find(c => c.id === product.categoryId) || {};
+                    
+                    // Use the first image as the main image
+                    const productImage = product.imageUrls?.length > 0 
+                        ? 'https://localhost:7058' + product.imageUrls[0] 
+                        : 'img/placeholder-product.jpg';
+                    
+                    productCard.innerHTML = `
+    <a href="shop-detail.html?id=${product.id}" class="text-decoration-none">
+        <div class="rounded position-relative fruite-item">
+            <div class="fruite-img">
+                <img src="${productImage}" class="img-fluid w-100 rounded-top" alt="${product.name}">
+            </div>
+            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">
+                ${category.name || 'Product'}
+            </div>
+            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                <h4 class="text-dark">${product.name}</h4>
+                <p class="text-muted">${product.description || 'No description available'}</p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="text-dark fs-5 fw-bold mb-0">$${product.price.toFixed(2)}</p>
+                    <button class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" data-product-id="${product.id}">
+                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </a>
+`;
+                    
+                    container.appendChild(productCard);
+                });
+            }
+            
+            // Update pagination controls
+            updatePaginationControls(filteredProducts.length, totalPages);
+        }
+        
+        // Update pagination numbers
+        function updatePaginationControls(totalProducts, totalPages) {
+            const paginationContainer = document.getElementById('pagination-numbers');
+            paginationContainer.innerHTML = '';
+            
+            // Only show pagination if there are multiple pages
+            if (totalPages > 1) {
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageLink = document.createElement('a');
+                    pageLink.href = '#';
+                    pageLink.className = `rounded ${i === currentPage ? 'active' : ''}`;
+                    pageLink.textContent = i;
+                    pageLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        currentPage = i;
+                        renderProducts();
+                    });
+                    paginationContainer.appendChild(pageLink);
+                }
+            }
+            
+            // Update prev/next button states
+            document.getElementById('prev-page').classList.toggle('disabled', currentPage === 1);
+            document.getElementById('next-page').classList.toggle('disabled', currentPage === totalPages);
+        }
+    });
+    </script>
+</body>
+</html>

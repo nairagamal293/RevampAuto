@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>REVAMP AUTO - Product Details</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- Add these if not already present -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add to head -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Add before closing body -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+  
+    <style>
+        .product-item {
+    margin-bottom: 30px; /* Adjust this value for more/less space */
+    padding: 15px;
+    border-bottom: 1px solid #eee; /* Optional separator */
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+        <div class="container topbar bg-primary d-none d-lg-block">
+            <div class="d-flex justify-content-between">
+                <div class="top-info ps-2">
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
+                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
+                </div>
+                <div class="top-link pe-2">
+                    <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/REVAMP.PNG" alt="REVAMP AUTO Logo" class="img-fluid" style="max-height: 50px;">
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="shop.html" class="nav-item nav-link">Shop</a>
+                        <a href="shop-detail.html" class="nav-item nav-link active">Shop Detail</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <a href="cart.html" class="dropdown-item">Cart</a>
+                                <a href="chackout.html" class="dropdown-item">Checkout</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex m-3 me-0">
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                        <a href="cart.html" class="position-relative me-4 my-auto">
+                            <i class="fa fa-shopping-bag fa-2x"></i>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;" id="cart-count">0</span>
+                        </a>
+                        <a href="#" class="my-auto">
+                            <i class="fas fa-user fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+    <!-- Single Page Header start -->
+    <div class="container-fluid page-header py-5">
+        <h1 class="text-center text-white display-6">Product Details</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+            <li class="breadcrumb-item active text-white" id="product-name-breadcrumb">Product</li>
+        </ol>
+    </div>
+    <!-- Single Page Header End -->
+
+    <!-- Product Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div id="product-detail-loading" class="text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading product details...</p>
+            </div>
+            
+            <div id="product-detail-content" style="display: none;">
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="bg-light rounded">
+                                    <!-- Main Product Image -->
+                                    <div id="main-product-image-container" class="text-center p-4">
+                                        <img id="main-product-image" src="" class="img-fluid rounded" alt="Product Image" style="max-height: 500px;">
+                                    </div>
+                                    <!-- Product Thumbnails -->
+                                    <div id="product-thumbnails" class="owl-carousel owl-theme border-top border-bottom py-3 px-4">
+                                        <!-- Thumbnails will be added here dynamically -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-light rounded p-4">
+                                    <h4 class="mb-4">Product Description</h4>
+                                    <p id="product-description" class="mb-4"></p>
+                                    <div class="row g-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check text-primary me-2"></i>
+                                                <span class="text-dark">High Quality Materials</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check text-primary me-2"></i>
+                                                <span class="text-dark">Easy To Use</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check text-primary me-2"></i>
+                                                <span class="text-dark">Professional Results</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check text-primary me-2"></i>
+                                                <span class="text-dark">Long Lasting</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="bg-light rounded p-4">
+                            <h2 id="product-name" class="mb-3"></h2>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="text-primary me-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <small class="text-muted">(142 Reviews)</small>
+                            </div>
+                            <h3 id="product-price" class="mb-3"></h3>
+                            <p class="mb-4" id="product-stock"></p>
+                            
+                            <div class="input-group quantity mb-4" style="width: 120px;">
+                                <button class="btn btn-minus border-secondary rounded-0">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="text" class="form-control text-center border-0" value="1" id="product-quantity">
+                                <button class="btn btn-plus border-secondary rounded-0">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            
+                            <button class="btn btn-primary border-0 py-3 px-4 rounded-pill w-100 mb-4" id="add-to-cart-btn">
+                                <i class="fa fa-shopping-bag me-2"></i> Add to Cart
+                            </button>
+                            
+                            <div class="border-top border-bottom py-3 mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-dark"><i class="fas fa-box-open text-primary me-2"></i> Product Code:</span>
+                                    <span id="product-id" class="text-muted"></span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-dark"><i class="fas fa-layer-group text-primary me-2"></i> Category:</span>
+                                    <span id="product-category" class="text-muted"></span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-dark"><i class="fas fa-calendar-alt text-primary me-2"></i> Added On:</span>
+                                    <span id="product-created" class="text-muted"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-4">
+                                <a href="#" class="btn btn-secondary btn-square me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-secondary btn-square me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-secondary btn-square me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-secondary btn-square"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Products -->
+                <!-- Related Products -->
+<div class="swiper-container related-products">
+    <br>
+    <h1>Related Products</h1>
+    <br>
+    <div class="swiper-wrapper" id="related-products">
+        <!-- Items will be added here -->
+    </div>
+    <!-- Add navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+            </div>
+            
+            <div id="product-not-found" class="text-center py-5" style="display: none;">
+                <h3 class="mb-3">Product Not Found</h3>
+                <p class="mb-4">The product you're looking for doesn't exist or may have been removed.</p>
+                <a href="shop.html" class="btn btn-primary px-4 py-2 rounded-pill">Back to Shop</a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Detail End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#">
+                            <h1 class="text-primary mb-0">REVAMP AUTO</h1>
+                            <p class="text-secondary mb-0">Quality Car Care Products</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="email" placeholder="Your Email">
+                            <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex justify-content-end pt-3">
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-secondary btn-md-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Why Choose Us</h4>
+                        <p class="mb-4">We provide high-quality car care products to keep your vehicle looking its best. Our products are carefully selected for their performance and value.</p>
+                        <a href="#" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Shop Info</h4>
+                        <a class="btn-link" href="#">About Us</a>
+                        <a class="btn-link" href="#">Contact Us</a>
+                        <a class="btn-link" href="#">Privacy Policy</a>
+                        <a class="btn-link" href="#">Terms & Condition</a>
+                        <a class="btn-link" href="#">Return Policy</a>
+                        <a class="btn-link" href="#">FAQs & Help</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Account</h4>
+                        <a class="btn-link" href="#">My Account</a>
+                        <a class="btn-link" href="#">Shop details</a>
+                        <a class="btn-link" href="#">Shopping Cart</a>
+                        <a class="btn-link" href="#">Wishlist</a>
+                        <a class="btn-link" href="#">Order History</a>
+                        <a class="btn-link" href="#">International Orders</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Contact</h4>
+                        <p>Address: 123 Street, New York</p>
+                        <p>Email: Email@Example.com</p>
+                        <p>Phone: +0123 4567 8910</p>
+                        <p>Payment Accepted</p>
+                        <img src="img/payment.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>REVAMP AUTO</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 my-auto text-center text-md-end text-white">
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        // Initialize carousels
+        const initCarousels = function() {
+            // Product thumbnails carousel
+            $('#product-thumbnails').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: { items: 3 },
+                    576: { items: 4 },
+                    768: { items: 5 },
+                    992: { items: 4 }
+                }
+            });
+            
+           // Replace Owl Carousel initialization with:
+const relatedSwiper = new Swiper('.related-products', {
+    slidesPerView: 1,
+    spaceBetween: 30, // Increased from 20 to 30
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 4 }
+    }
+});
+        };
+        
+        // Load product details
+        const loadProductDetails = function(id) {
+            fetch(`https://localhost:7058/api/Products/${id}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Product not found');
+                    return response.json();
+                })
+                .then(product => {
+                    // Display product data
+                    document.getElementById('product-name').textContent = product.name;
+                    document.getElementById('product-name-breadcrumb').textContent = product.name;
+                    document.getElementById('product-description').textContent = product.description || 'No description available';
+                    document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
+                    document.getElementById('product-stock').textContent = product.stockQuantity > 0 
+                        ? `In Stock : ${product.stockQuantity}`
+                        : '<span class="text-danger"><i class="fas fa-times-circle me-2"></i>Out of Stock</span>';
+                    document.getElementById('product-id').textContent = `#${product.id}`;
+                    document.getElementById('product-created').textContent = new Date(product.createdAt).toLocaleDateString();
+                    
+                    // Set main product image
+                    if (product.imageUrls && product.imageUrls.length > 0) {
+                        const mainImg = document.getElementById('main-product-image');
+                        mainImg.src = 'https://localhost:7058' + product.imageUrls[0];
+                        mainImg.alt = product.name;
+                        
+                        // Create thumbnails
+                        const thumbnailsContainer = document.getElementById('product-thumbnails');
+                        thumbnailsContainer.innerHTML = '';
+                        
+                        product.imageUrls.forEach((imgUrl, index) => {
+                            const thumbnail = document.createElement('div');
+                            thumbnail.className = 'item';
+                            thumbnail.innerHTML = `
+                                <img src="https://localhost:7058${imgUrl}" class="img-fluid thumbnail-img" alt="${product.name} Thumbnail ${index + 1}" 
+                                     style="cursor: pointer; height: 80px; object-fit: cover;">
+                            `;
+                            thumbnailsContainer.appendChild(thumbnail);
+                            
+                            // Add click event to thumbnails
+                            thumbnail.querySelector('img').addEventListener('click', () => {
+                                mainImg.src = 'https://localhost:7058' + imgUrl;
+                            });
+                        });
+                    }
+                    
+                    // Load category name
+                    fetch(`https://localhost:7058/api/Categories/${product.categoryId}`)
+                        .then(response => {
+                            if (response.ok) {
+                                return response.json().then(category => {
+                                    document.getElementById('product-category').textContent = category.name;
+                                });
+                            }
+                        })
+                        .catch(() => {
+                            document.getElementById('product-category').textContent = 'Uncategorized';
+                        });
+                    
+                    // Load related products
+                    loadRelatedProducts(product.categoryId, product.id);
+                    
+                    // Show product content
+                    document.getElementById('product-detail-loading').style.display = 'none';
+                    document.getElementById('product-detail-content').style.display = 'block';
+                    
+                    // Initialize carousels after content is loaded
+                    initCarousels();
+                })
+                .catch(error => {
+                    console.error('Error loading product:', error);
+                    document.getElementById('product-detail-loading').style.display = 'none';
+                    document.getElementById('product-not-found').style.display = 'block';
+                });
+        };
+        
+        // Load related products
+        const loadRelatedProducts = function(categoryId, excludeProductId) {
+            fetch(`https://localhost:7058/api/Products/category/${categoryId}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load related products');
+                    return response.json();
+                })
+                .then(products => {
+                    // Filter out the current product
+                    const relatedProducts = products.filter(p => p.id !== excludeProductId).slice(0, 6);
+                    const container = document.getElementById('related-products');
+                    
+                    if (relatedProducts.length === 0) {
+                        container.closest('.row').style.display = 'none';
+                        return;
+                    }
+                    
+                    container.innerHTML = '';
+                    
+                    relatedProducts.forEach(product => {
+                        const productCard = document.createElement('div');
+                        productCard.className = 'item';
+                        
+                        const mainImage = product.imageUrls && product.imageUrls.length > 0 
+                            ? 'https://localhost:7058' + product.imageUrls[0] 
+                            : 'img/placeholder-product.jpg';
+                        
+                        productCard.innerHTML = `
+                            <div class="rounded position-relative fruite-item">
+                                <div class="fruite-img">
+                                    <img src="${mainImage}" class="img-fluid w-100 rounded-top" alt="${product.name}" style="height: 200px; object-fit: cover;">
+                                </div>
+                                <div class="p-3 border border-secondary border-top-0 rounded-bottom">
+                                    <h5>${product.name}</h5>
+                                    <p class="mb-2">$${product.price.toFixed(2)}</p>
+                                    <a href="shop-detail.html?id=${product.id}" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                        <i class="fa fa-eye me-2"></i> View
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                        
+                        container.appendChild(productCard);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading related products:', error);
+                    document.querySelector('#related-products').closest('.row').style.display = 'none';
+                });
+        };
+        
+        // Quantity controls
+        document.querySelector('.btn-minus').addEventListener('click', function() {
+            const quantityInput = document.getElementById('product-quantity');
+            let quantity = parseInt(quantityInput.value);
+            if (quantity > 1) {
+                quantityInput.value = quantity - 1;
+            }
+        });
+        
+        document.querySelector('.btn-plus').addEventListener('click', function() {
+            const quantityInput = document.getElementById('product-quantity');
+            let quantity = parseInt(quantityInput.value);
+            quantityInput.value = quantity + 1;
+        });
+        
+        // Add to cart functionality
+        document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+            const quantity = parseInt(document.getElementById('product-quantity').value);
+            const productId = urlParams.get('id');
+            
+            // Here you would typically add to cart via API or localStorage
+            // For now we'll just show a success message
+            alert(`Added ${quantity} item(s) to cart!`);
+            
+            // Update cart count
+            const cartCount = document.getElementById('cart-count');
+            const currentCount = parseInt(cartCount.textContent) || 0;
+            cartCount.textContent = currentCount + quantity;
+        });
+        
+        // Load product if ID is provided
+        if (productId) {
+            loadProductDetails(productId);
+        } else {
+            document.getElementById('product-detail-loading').style.display = 'none';
+            document.getElementById('product-not-found').style.display = 'block';
+        }
+    });
+    </script>
+</body>
+</html>

@@ -19,6 +19,8 @@ namespace RevampAuto.Data
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -27,7 +29,7 @@ namespace RevampAuto.Data
 
             base.OnModelCreating(builder);
 
-            // Explicitly map Identity tables (optional but recommended)
+            // Explicitly map Identity tables
             builder.Entity<User>().ToTable("Users");
             builder.Entity<IdentityRole>().ToTable("Roles");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -92,6 +94,25 @@ namespace RevampAuto.Data
                 .HasForeignKey(pi => pi.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            // Cart configurations
+            builder.Entity<Cart>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<Cart>()
+                .HasMany(c => c.Items)
+                .WithOne(ci => ci.Cart)
+                .HasForeignKey(ci => ci.CartId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<CartItem>()
+                .HasOne(ci => ci.Product)
+                .WithMany()
+                .HasForeignKey(ci => ci.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             // Configure indexes
             builder.Entity<Product>().HasIndex(p => p.CategoryId);
             builder.Entity<Order>().HasIndex(o => o.UserId);
@@ -100,6 +121,12 @@ namespace RevampAuto.Data
             builder.Entity<OrderItem>().HasIndex(oi => oi.ProductId);
             builder.Entity<Favorite>().HasIndex(f => f.UserId);
             builder.Entity<Favorite>().HasIndex(f => f.ProductId);
+
+            // Cart indexes
+            builder.Entity<Cart>().HasIndex(c => c.UserId).IsUnique();
+            builder.Entity<CartItem>().HasIndex(ci => ci.CartId);
+            builder.Entity<CartItem>().HasIndex(ci => ci.ProductId);
+            builder.Entity<CartItem>().HasIndex(ci => new { ci.CartId, ci.ProductId }).IsUnique();
 
             // Configure default values
             builder.Entity<Order>()
@@ -118,6 +145,15 @@ namespace RevampAuto.Data
                 .Property(c => c.IsRead)
                 .HasDefaultValue(false);
 
+            // Cart default values
+            builder.Entity<Cart>()
+                .Property(c => c.CreatedAt)
+                .HasDefaultValueSql("GETUTCDATE()");
+
+            builder.Entity<CartItem>()
+                .Property(ci => ci.AddedAt)
+                .HasDefaultValueSql("GETUTCDATE()");
+
             // Configure string lengths
             builder.Entity<Category>().Property(c => c.Name).HasMaxLength(100);
             builder.Entity<Product>().Property(p => p.Name).HasMaxLength(200);
@@ -125,6 +161,7 @@ namespace RevampAuto.Data
             builder.Entity<ContactMessage>().Property(c => c.Email).HasMaxLength(100);
             builder.Entity<ContactMessage>().Property(c => c.Message).HasMaxLength(500);
             builder.Entity<ProductImage>().Property(pi => pi.ImagePath).HasMaxLength(500);
+            builder.Entity<Cart>().Property(c => c.UserId).HasMaxLength(450);
         }
     }
 }

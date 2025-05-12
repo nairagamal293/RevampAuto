@@ -17,12 +17,16 @@ namespace RevampAuto.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _environment;
+        private readonly ILogger<ProductsController> _logger;
 
-        public ProductsController(ApplicationDbContext context, IWebHostEnvironment environment)
+
+        public ProductsController(ApplicationDbContext context, IWebHostEnvironment environment, ILogger<ProductsController> logger)
         {
             _context = context;
             _environment = environment;
+            _logger = logger;
         }
+
 
         // GET: api/products
         [HttpGet]
@@ -95,75 +99,81 @@ namespace RevampAuto.Controllers
             return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
         }
 
-        // POST: api/products/{id}/images
-        [Authorize(Roles = "Admin")]
         [HttpPost("{id}/images")]
-        public async Task<ActionResult> UploadImages(int id, [FromForm] List<IFormFile> files, [FromQuery] bool setMain = false)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UploadImages(int id, [FromForm] List<IFormFile> files, [FromQuery] bool setMain = false)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product == null)
+            try
             {
-                return NotFound("Product not found");
-            }
+                if (files == null || files.Count == 0)
+                    return BadRequest("No files uploaded");
 
-            if (files == null || files.Count == 0)
-            {
-                return BadRequest("No files uploaded");
-            }
-
-            var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads", "products");
-            if (!Directory.Exists(uploadsFolder))
-            {
-                Directory.CreateDirectory(uploadsFolder);
-            }
-
-            var uploadedFiles = new List<ProductImage>();
-
-            foreach (var file in files)
-            {
-                if (file.Length > 0)
+                // Ensure WebRootPath is available
+                if (string.IsNullOrEmpty(_environment.WebRootPath))
                 {
-                    var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    _environment.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+                }
 
-                    using (var stream = new FileStream(filePath, FileMode.Create))
+                var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads", "products");
+
+                // Create directory if it doesn't exist
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                var uploadedFiles = new List<ProductImage>();
+
+                foreach (var file in files)
+                {
+                    if (file.Length > 0)
                     {
-                        await file.CopyToAsync(stream);
+                        var uniqueFileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+                        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+
+                        var productImage = new ProductImage
+                        {
+                            ImagePath = $"/uploads/products/{uniqueFileName}",
+                            ProductId = id,
+                            IsMainImage = setMain && files.IndexOf(file) == 0
+                        };
+
+                        uploadedFiles.Add(productImage);
                     }
-
-                    var productImage = new ProductImage
-                    {
-                        ImagePath = $"/uploads/products/{uniqueFileName}",
-                        ProductId = id,
-                        IsMainImage = setMain && files.IndexOf(file) == 0 // Set first image as main if setMain=true
-                    };
-
-                    uploadedFiles.Add(productImage);
                 }
-            }
 
-            // If setting main image, ensure only one main image exists
-            if (setMain)
-            {
-                var existingMainImages = await _context.ProductImages
-                    .Where(pi => pi.ProductId == id && pi.IsMainImage)
-                    .ToListAsync();
-
-                foreach (var img in existingMainImages)
+                if (setMain)
                 {
-                    img.IsMainImage = false;
+                    var existingMainImages = await _context.ProductImages
+                        .Where(pi => pi.ProductId == id && pi.IsMainImage)
+                        .ToListAsync();
+
+                    foreach (var img in existingMainImages)
+                    {
+                        img.IsMainImage = false;
+                    }
                 }
+
+                await _context.ProductImages.AddRangeAsync(uploadedFiles);
+                await _context.SaveChangesAsync();
+
+                return Ok(uploadedFiles.Select(i => new ProductImageDto
+                {
+                    Id = i.Id,
+                    ImagePath = i.ImagePath,
+                    IsMainImage = i.IsMainImage
+                }));
             }
-
-            await _context.ProductImages.AddRangeAsync(uploadedFiles);
-            await _context.SaveChangesAsync();
-
-            return Ok(uploadedFiles.Select(i => new ProductImageDto
+            catch (Exception ex)
             {
-                Id = i.Id,
-                ImagePath = i.ImagePath,
-                IsMainImage = i.IsMainImage
-            }));
+                _logger.LogError(ex, "Error uploading images");
+                return StatusCode(500, "Internal server error while uploading images");
+            }
         }
 
         // PUT: api/products/5/images/3/setmain
@@ -259,6 +269,37 @@ namespace RevampAuto.Controllers
             }
 
             return NoContent();
+        }
+        // GET: api/products/category/{categoryId}
+        [HttpGet("category/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<ProductDto>>> GetProductsByCategory(int categoryId)
+        {
+            // First check if category exists
+            var categoryExists = await _context.Categories.AnyAsync(c => c.Id == categoryId);
+            if (!categoryExists)
+            {
+                return NotFound("Category not found");
+            }
+
+            var products = await _context.Products
+                .Where(p => p.CategoryId == categoryId)
+                .Include(p => p.Category)
+                .Include(p => p.Images)
+                .Select(p => new ProductDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Price = p.Price,
+                    StockQuantity = p.StockQuantity,
+                    CategoryId = p.CategoryId,
+                    CategoryName = p.Category.Name,
+                    ImageUrls = p.Images.Select(i => i.ImagePath).ToList(),
+                    MainImageUrl = p.Images.Where(i => i.IsMainImage).Select(i => i.ImagePath).FirstOrDefault()
+                })
+                .ToListAsync();
+
+            return products;
         }
 
         // DELETE: api/products/5

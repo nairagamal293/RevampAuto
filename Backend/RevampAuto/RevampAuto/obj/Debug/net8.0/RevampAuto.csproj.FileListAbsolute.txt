@@ -144,3 +144,5 @@ D:\Naira\REVAMP AUTO\Backend\RevampAuto\RevampAuto\obj\Debug\net8.0\refint\Revam
 D:\Naira\REVAMP AUTO\Backend\RevampAuto\RevampAuto\obj\Debug\net8.0\RevampAuto.pdb
 D:\Naira\REVAMP AUTO\Backend\RevampAuto\RevampAuto\obj\Debug\net8.0\RevampAuto.genruntimeconfig.cache
 D:\Naira\REVAMP AUTO\Backend\RevampAuto\RevampAuto\obj\Debug\net8.0\ref\RevampAuto.dll
+D:\Naira\REVAMP AUTO\Backend\RevampAuto\RevampAuto\obj\Debug\net8.0\RevampAuto.sourcelink.json
+D:\Naira\REVAMP AUTO\Backend\RevampAuto\RevampAuto\bin\Debug\net8.0\RevampAuto.staticwebassets.runtime.json
