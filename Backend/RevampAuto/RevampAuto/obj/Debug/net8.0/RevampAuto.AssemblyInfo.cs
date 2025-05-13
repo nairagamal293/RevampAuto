@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RevampAuto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaf1cfd1437b1b0997b5736f85bdbeff144693e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f802f94b8b718697154083323ce49b32b439a15e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RevampAuto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RevampAuto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

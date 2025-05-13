@@ -10,6 +10,10 @@
         public string PostalCode { get; set; }
         public string Country { get; set; }
         public string PhoneNumber { get; set; }
+        public string TrackingNumber { get; set; }
+        public string ShippingMethod { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public DateTime? EstimatedDeliveryDate { get; set; }
     }
 
     public class ShippingDetailsCreateDto : ShippingDetailsDto { }

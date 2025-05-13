@@ -360,6 +360,7 @@
         </div>
         <!-- Footer End -->
 
+
         <!-- Copyright Start -->
         <div class="container-fluid copyright bg-dark py-4">
             <div class="container">
@@ -394,6 +395,327 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const cartContainer = document.getElementById('cart-container');
+    
+    if (user && user.token) {
+        // Load cart from API for authenticated users
+        loadUserCart();
+    } else {
+        // Load cart from local storage for guests
+        loadGuestCart();
+    }
+});
+
+async function loadUserCart() {
+    try {
+        const response = await fetch('https://localhost:7058/api/cart', {
+            headers: {
+                'Authorization': `Bearer ${JSON.parse(localStorage.getItem('user')).token}`
+            }
+        });
+        
+        if (!response.ok) throw new Error('Failed to load cart');
+        
+        const cart = await response.json();
+        renderCart(cart);
+    } catch (error) {
+        console.error('Error loading cart:', error);
+        renderError('Failed to load your cart. Please try again.');
+    }
+}
+
+function loadGuestCart() {
+    const guestCart = JSON.parse(localStorage.getItem('guestCart')) || { items: [] };
+    
+    // If no items, show empty cart
+    if (guestCart.items.length === 0) {
+        renderEmptyCart();
+        return;
+    }
+    
+    // Fetch product details for each item in guest cart
+    const productIds = guestCart.items.map(item => item.productId).join(',');
+    
+    fetch(`https://localhost:7058/api/products?ids=${productIds}`)
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load products');
+            return response.json();
+        })
+        .then(products => {
+            // Combine product details with cart quantities
+            const cartWithProducts = {
+                items: guestCart.items.map(item => {
+                    const product = products.find(p => p.id === item.productId);
+                    return {
+                        ...item,
+                        product: product || null
+                    };
+                }),
+                totalPrice: guestCart.items.reduce((total, item) => {
+                    const product = products.find(p => p.id === item.productId);
+                    return total + (product ? product.price * item.quantity : 0);
+                }, 0)
+            };
+            
+            renderCart(cartWithProducts);
+        })
+        .catch(error => {
+            console.error('Error loading guest cart:', error);
+            renderError('Failed to load your cart. Please try again.');
+        });
+}
+
+function renderCart(cart) {
+    const cartContainer = document.getElementById('cart-container');
+    
+    if (cart.items.length === 0) {
+        renderEmptyCart();
+        return;
+    }
+    
+    cartContainer.innerHTML = `
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Products</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${cart.items.map(item => `
+                        <tr>
+                            <td>
+                                ${item.product ? `
+                                    <img src="${item.product.mainImageUrl || 'img/placeholder-product.jpg'}" 
+                                         class="img-fluid me-5 rounded-circle" 
+                                         style="width: 80px; height: 80px;" 
+                                         alt="${item.product.name}">
+                                ` : 'Product not found'}
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-4">${item.product ? item.product.name : 'Product not found'}</p>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-4">$${item.product ? item.product.price.toFixed(2) : '0.00'}</p>
+                            </td>
+                            <td>
+                                <div class="input-group quantity mt-4" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" 
+                                                data-item-id="${item.id}" ${item.quantity <= 1 ? 'disabled' : ''}>
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm text-center border-0" 
+                                           value="${item.quantity}" data-item-id="${item.id}">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border" 
+                                                data-item-id="${item.id}">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="mb-0 mt-4">$${item.product ? (item.product.price * item.quantity).toFixed(2) : '0.00'}</p>
+                            </td>
+                            <td>
+                                <button class="btn btn-md rounded-circle bg-light border mt-4 remove-item" 
+                                        data-item-id="${item.id}">
+                                    <i class="fa fa-times text-danger"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-5">
+            <div class="row g-4 justify-content-end">
+                <div class="col-8"></div>
+                <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
+                    <div class="bg-light rounded">
+                        <div class="p-4">
+                            <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
+                            <div class="d-flex justify-content-between mb-4">
+                                <h5 class="mb-0 me-4">Subtotal:</h5>
+                                <p class="mb-0">$${cart.totalPrice.toFixed(2)}</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-0 me-4">Shipping</h5>
+                                <p class="mb-0">$0.00</p>
+                            </div>
+                        </div>
+                        <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
+                            <h5 class="mb-0 ps-4 me-4">Total</h5>
+                            <p class="mb-0 pe-4">$${cart.totalPrice.toFixed(2)}</p>
+                        </div>
+                        <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4 checkout-btn">
+                            Proceed Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Add event listeners for quantity changes and removal
+    addCartEventListeners();
+}
+
+function renderEmptyCart() {
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.innerHTML = `
+        <div class="text-center py-5">
+            <h3>Your cart is empty</h3>
+            <p class="text-muted">Looks like you haven't added any items to your cart yet.</p>
+            <a href="shop.html" class="btn btn-primary mt-3">Continue Shopping</a>
+        </div>
+    `;
+}
+
+function renderError(message) {
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.innerHTML = `
+        <div class="alert alert-danger">
+            ${message}
+        </div>
+    `;
+}
+
+function addCartEventListeners() {
+    // Quantity minus buttons
+    document.querySelectorAll('.btn-minus').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const itemId = this.getAttribute('data-item-id');
+            updateCartItemQuantity(itemId, -1);
+        });
+    });
+    
+    // Quantity plus buttons
+    document.querySelectorAll('.btn-plus').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const itemId = this.getAttribute('data-item-id');
+            updateCartItemQuantity(itemId, 1);
+        });
+    });
+    
+    // Remove item buttons
+    document.querySelectorAll('.remove-item').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const itemId = this.getAttribute('data-item-id');
+            removeCartItem(itemId);
+        });
+    });
+    
+    // Checkout button
+    document.querySelector('.checkout-btn')?.addEventListener('click', function() {
+        proceedToCheckout();
+    });
+}
+
+function updateCartItemQuantity(itemId, change) {
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+    if (user && user.token) {
+        // For authenticated users - call API
+        fetch(`https://localhost:7058/api/cart/items/${itemId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
+            },
+            body: JSON.stringify({
+                quantity: change // This should be the new quantity, not the change
+                // You'll need to get the current quantity first or modify your API
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                // Reload cart
+                loadUserCart();
+            } else {
+                throw new Error('Failed to update quantity');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating quantity:', error);
+            showToast('Error updating quantity', 'error');
+        });
+    } else {
+        // For guest users - update local storage
+        const guestCart = JSON.parse(localStorage.getItem('guestCart')) || { items: [] };
+        const item = guestCart.items.find(i => i.id == itemId);
+        
+        if (item) {
+            item.quantity += change;
+            
+            if (item.quantity <= 0) {
+                // Remove item if quantity is 0 or less
+                guestCart.items = guestCart.items.filter(i => i.id != itemId);
+            }
+            
+            localStorage.setItem('guestCart', JSON.stringify(guestCart));
+            loadGuestCart();
+        }
+    }
+}
+
+function removeCartItem(itemId) {
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+    if (user && user.token) {
+        // For authenticated users - call API
+        fetch(`https://localhost:7058/api/cart/items/${itemId}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${user.token}`
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Reload cart
+                loadUserCart();
+                showToast('Item removed from cart');
+            } else {
+                throw new Error('Failed to remove item');
+            }
+        })
+        .catch(error => {
+            console.error('Error removing item:', error);
+            showToast('Error removing item', 'error');
+        });
+    } else {
+        // For guest users - update local storage
+        const guestCart = JSON.parse(localStorage.getItem('guestCart')) || { items: [] };
+        guestCart.items = guestCart.items.filter(i => i.id != itemId);
+        localStorage.setItem('guestCart', JSON.stringify(guestCart));
+        loadGuestCart();
+        showToast('Item removed from cart');
+    }
+}
+
+function proceedToCheckout() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+    if (!user) {
+        // Redirect to login with return URL
+        window.location.href = 'login.html?returnUrl=checkout.html';
+        return;
+    }
+    
+    // Proceed to checkout
+    window.location.href = 'checkout.html';
+}
+    </script>
     </body>
 
 </html>

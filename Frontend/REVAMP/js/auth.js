@@ -23,28 +23,28 @@ document.getElementById('loginForm')?.addEventListener('submit', async function(
         console.log('Login response:', data); // Debug
         
         if (response.ok) {
-            // Save token and email
-            localStorage.setItem('authToken', data.token);
-            localStorage.setItem('userEmail', email);
-            
-            // Extract role from the token
-            const tokenPayload = JSON.parse(atob(data.token.split('.')[1]));
-            const roles = tokenPayload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] || 
-                         tokenPayload.role || 
-                         [];
-            
-            // Ensure roles is always an array
-            const userRoles = Array.isArray(roles) ? roles : [roles];
-            localStorage.setItem('userRoles', JSON.stringify(userRoles));
-            
-            console.log('Extracted roles:', userRoles); // Debug
-            
-            // Redirect based on role
-            if (userRoles.includes('Admin')) {
-                window.location.href = 'admin.html';
-            } else {
-                window.location.href = 'index.html';
-            }
+    localStorage.setItem('authToken', data.token);
+    localStorage.setItem('userEmail', email);
+
+    // Store user info for navbar display
+    localStorage.setItem('user', JSON.stringify({
+        name: email // or fetch/display full name if available from API later
+    }));
+
+    // Decode roles from token
+    const tokenPayload = JSON.parse(atob(data.token.split('.')[1]));
+    const roles = tokenPayload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] || 
+                 tokenPayload.role || 
+                 [];
+    const userRoles = Array.isArray(roles) ? roles : [roles];
+    localStorage.setItem('userRoles', JSON.stringify(userRoles));
+
+    // Redirect based on role
+    if (userRoles.includes('Admin')) {
+        window.location.href = 'admin.html';
+    } else {
+        window.location.href = 'index.html';
+    }
         } else {
             alert(data.message || 'Login failed');
         }

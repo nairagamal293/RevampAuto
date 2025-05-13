@@ -29,4 +29,15 @@
     {
         public int Quantity { get; set; }
     }
+
+    public class GuestCartDto
+    {
+        public List<GuestCartItemDto> Items { get; set; }
+    }
+
+    public class GuestCartItemDto
+    {
+        public int ProductId { get; set; }
+        public int Quantity { get; set; }
+    }
 }

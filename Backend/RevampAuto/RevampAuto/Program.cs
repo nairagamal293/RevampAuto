@@ -55,8 +55,16 @@ builder.Services.AddAuthentication(options =>
 
 // Add Services
 builder.Services.AddScoped<IAuthService, AuthService>();
+// Add this to your services configuration
+// Add this to your services configuration
+builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<IFavoriteService, FavoriteService>();
+builder.Services.AddScoped<IDiscountService, DiscountService>();
+builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IShippingService, ShippingService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
-// Add Controllers
 builder.Services.AddControllers();
 
 // Configure Swagger

@@ -286,5 +286,72 @@ namespace RevampAuto.Controllers
                 return StatusCode(500, "An error occurred while getting cart item count");
             }
         }
+
+        // Add this method to your CartController
+        [HttpPost("merge")]
+        [Authorize]
+        public async Task<ActionResult<CartDto>> MergeGuestCart([FromBody] GuestCartDto guestCartDto)
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized();
+                }
+
+                // Get the user's cart
+                var cart = await _context.Carts
+                    .Include(c => c.Items)
+                    .FirstOrDefaultAsync(c => c.UserId == userId) ?? new Cart
+                    {
+                        UserId = userId,
+                        Items = new List<CartItem>()
+                    };
+
+                if (cart.Id == 0)
+                {
+                    _context.Carts.Add(cart);
+                }
+
+                // Process guest cart items
+                foreach (var guestItem in guestCartDto.Items)
+                {
+                    // Validate product exists
+                    var product = await _context.Products.FindAsync(guestItem.ProductId);
+                    if (product == null) continue;
+
+                    // Check if item already exists in cart
+                    var existingItem = cart.Items.FirstOrDefault(ci => ci.ProductId == guestItem.ProductId);
+
+                    if (existingItem != null)
+                    {
+                        // Update quantity if item exists
+                        existingItem.Quantity += guestItem.Quantity;
+                    }
+                    else
+                    {
+                        // Add new item to cart
+                        cart.Items.Add(new CartItem
+                        {
+                            ProductId = guestItem.ProductId,
+                            Quantity = guestItem.Quantity
+                        });
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+
+                return await GetCart();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error merging guest cart");
+                return StatusCode(500, "An error occurred while merging guest cart");
+            }
+        }
+
+        
+        
     }
 }
